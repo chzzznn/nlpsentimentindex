@@ -1,0 +1,31 @@
+project:
+  name: nlp-sentiment-index
+
+io:
+  data_dir: data
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  plots_dir: plots
+
+news:
+  provider: newsapi
+  query: "stock market OR equities OR S&P"
+  sources: ["wsj.com", "bloomberg.com", "reuters.com", "ft.com"]
+  language: en
+  from_date: 2025-01-01
+  to_date: 2025-06-30
+  page_size: 100
+
+sentiment:
+  engine: vader
+  agg: mean
+
+market:
+  ticker: ^GSPC
+  start: 2025-01-01
+  end: 2025-06-30
+
+analysis:
+  rolling_window: 7
+  max_lag: 5

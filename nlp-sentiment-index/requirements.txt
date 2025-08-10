@@ -1,0 +1,10 @@
+pandas>=2.2
+numpy>=1.26
+python-dotenv>=1.0
+requests>=2.32
+yfinance>=0.2
+nltk>=3.9
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14
+scikit-learn>=1.4
